@@ -10,10 +10,10 @@ This project demonstrates real-time face recognition using OpenCV and the `face_
 ## Prerequisites
 
 ### Software Requirements
-- Python 3.6 or higher
-- OpenCV
-- face_recognition library
-- NumPy
+- Python 3.6 or higher  
+- OpenCV  
+- face_recognition library  
+- NumPy  
 
 ### Hardware Requirements
 - A working webcam for real-time face detection.
@@ -21,19 +21,20 @@ This project demonstrates real-time face recognition using OpenCV and the `face_
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your_username/face-recognition-opencv.git
-   cd face-recognition-opencv
+   git clone https://github.com/mohammeduvez29/Facial-Recognition-Model.git
+   cd Facial-Recognition-Model
    ```
-2. Install required dependencies:
+2. Install required libraries:
    ```bash
-   pip install -r requirements.txt
+   pip install opencv-python face_recognition numpy
    ```
+
 3. Ensure you have a folder named `images/` in the root directory of the project. Add images of known faces to this folder. Name the images with the corresponding person's name (e.g., `john_doe.jpg`).
 
 ## Usage
-1. Run the script:
+1. Run the main script:
    ```bash
-   python face_recognition.py
+   python main_video.py
    ```
 2. The system will access your webcam, detect faces, and identify known ones.
 3. Press `ESC` to exit the program.
@@ -41,22 +42,24 @@ This project demonstrates real-time face recognition using OpenCV and the `face_
 ## Project Structure
 ```
 .
-├── face_recognition.py     # Main script for real-time face recognition
+├── main_video.py           # Main script for real-time face recognition
 ├── simple_facerec.py       # Helper class for face encoding and recognition
 ├── images/                 # Folder containing known face images
-├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
 ```
 
 ## Code Explanation
 
-### face_recognition.py
-This script initializes the camera feed, loads encoded images, and performs face detection and recognition in real-time.
+### main_video.py
+This script:
+- Initializes the webcam.
+- Loads known face encodings using the `SimpleFacerec` class.
+- Detects faces in real-time and highlights them with bounding boxes and labels.
 
 ### simple_facerec.py
-This class encapsulates methods to:
+This class provides methods to:
 - Load and encode images from the `images/` directory.
-- Detect and identify faces from frames using the `face_recognition` library.
+- Detect and identify faces in each frame using the `face_recognition` library.
 
 ## Example Output
 - Recognized faces will be highlighted with a rectangle and their name displayed below the rectangle.
@@ -65,10 +68,10 @@ This class encapsulates methods to:
 ### Output Image Example
 Here is an example of the face recognition output:
 
-![Face Recognition Output](images/output_example.jpg)
+![Face Recognition Output](images/output.jpg)
 
 ## Dependencies
-Add the following libraries to your `requirements.txt` file:
+Install the following libraries:
 ```
 opencv-python
 face_recognition
@@ -76,13 +79,13 @@ numpy
 ```
 
 ## Troubleshooting
-- **Error: ModuleNotFoundError: No module named 'face_recognition'**
+- **Error: ModuleNotFoundError: No module named 'face_recognition'**  
   Ensure you have installed the `face_recognition` library. On some systems, you may need to install `dlib` before installing `face_recognition`:
   ```bash
   pip install dlib
   pip install face_recognition
   ```
-- **Error: Camera not working**
+- **Error: Camera not working**  
   Check your webcam permissions or ensure it is properly connected.
 
 ## License
