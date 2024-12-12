@@ -68,7 +68,7 @@ This class provides methods to:
 ### Output Image Example
 Here is an example of the face recognition output:
 
-![Face Recognition Output](images/output.jpg)
+![Face Recognition Output](images/output_example.jpg)
 
 ## Dependencies
 Install the following libraries:
